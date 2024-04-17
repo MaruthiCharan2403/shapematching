@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfe1dtt17yep7"]
+
+[ext_resource type="Script" path="res://scene4.gd" id="1_q7ags"]
+[ext_resource type="Texture2D" uid="uid://beix3pdhjg763" path="res://background.jpg" id="2_xo10e"]
+[ext_resource type="FontFile" uid="uid://dvwbsssrsjdn7" path="res://MightySouly-lxggD.ttf" id="3_ofpvw"]
+[ext_resource type="Texture2D" uid="uid://f5eqmii2b74q" path="res://circle1.png" id="4_0a2u3"]
+[ext_resource type="Texture2D" uid="uid://t5rlvur50ifx" path="res://triangle.jpeg" id="5_52pvd"]
+[ext_resource type="Texture2D" uid="uid://ug6blqredpj3" path="res://rectangle.jpeg" id="6_tnkwf"]
+[ext_resource type="VideoStream" path="res://WhatsApp-Video-2024-04-16-at-9.55.21-PM.ogv" id="7_nnib4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q7ags")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1152.0
+offset_bottom = 664.0
+texture = ExtResource("2_xo10e")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 308.0
+offset_top = 18.0
+offset_right = 831.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ofpvw")
+theme_override_font_sizes/font_size = 60
+text = "SHAPE MATCHING GAME"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 451.0
+offset_top = 123.0
+offset_right = 684.0
+offset_bottom = 335.0
+texture = ExtResource("5_52pvd")
+expand_mode = 1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visibility_layer = 15
+offset_left = 392.0
+offset_top = 255.0
+offset_right = 739.0
+offset_bottom = 543.0
+stream = ExtResource("7_nnib4")
+loop = true
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = -1.652
+anchor_top = 1.316
+anchor_right = -1.652
+anchor_bottom = 1.316
+offset_left = 777.0
+offset_top = 363.0
+offset_right = 1083.0
+offset_bottom = 572.0
+texture_normal = ExtResource("5_52pvd")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = -1.652
+anchor_top = 1.316
+anchor_right = -1.652
+anchor_bottom = 1.316
+offset_left = 409.0
+offset_top = 416.0
+offset_right = 715.0
+offset_bottom = 581.0
+texture_normal = ExtResource("6_tnkwf")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = -1.652
+anchor_top = 1.316
+anchor_right = -1.652
+anchor_bottom = 1.316
+offset_left = 115.0
+offset_top = 384.0
+offset_right = 345.0
+offset_bottom = 600.0
+texture_normal = ExtResource("4_0a2u3")
+stretch_mode = 0
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 987.0
+offset_top = 590.0
+offset_right = 1145.0
+offset_bottom = 657.0
+theme_override_fonts/font = ExtResource("3_ofpvw")
+theme_override_font_sizes/font_size = 30
+text = "NEXT"
+
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

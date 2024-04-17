@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu83wogk4jx10"]
+
+[ext_resource type="Texture2D" uid="uid://beix3pdhjg763" path="res://background.jpg" id="1_8y62v"]
+[ext_resource type="Script" path="res://usernameinput.gd" id="1_88yja"]
+[ext_resource type="FontFile" uid="uid://dvwbsssrsjdn7" path="res://MightySouly-lxggD.ttf" id="2_3l66f"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_88yja")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 659.0
+texture = ExtResource("1_8y62v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 24.0
+offset_right = 835.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3l66f")
+theme_override_font_sizes/font_size = 60
+text = "SHAPE MATCHING GAME"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 186.0
+offset_top = 142.0
+offset_right = 974.0
+offset_bottom = 289.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3l66f")
+theme_override_font_sizes/font_size = 120
+text = "ENTER USERNAME"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 307.0
+offset_top = 314.0
+offset_right = 865.0
+offset_bottom = 429.0
+theme_override_fonts/font = ExtResource("2_3l66f")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 463.0
+offset_top = 479.0
+offset_right = 693.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("2_3l66f")
+theme_override_font_sizes/font_size = 40
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
